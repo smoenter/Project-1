@@ -1,0 +1,27 @@
+header{
+    font-family:'Courier New', Courier, monospace
+    margin:0;
+}
+h1{
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+}
+nav{
+    display:flex;
+    flex-direction: row;
+    color: black;
+
+}
+nav ul{
+    list-style-type: none;
+}
+nav li{
+    display: inline;
+}
+main{
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
