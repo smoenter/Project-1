@@ -10,7 +10,7 @@ h1{
 }
 
 nav{
-    display:flex;
+    display: flex;
     flex-direction: row;
 }
 
@@ -49,8 +49,7 @@ main{
     align-self: flex-start;
 }
 
-h2 {
-    
+h2 {   
 }
 
 
