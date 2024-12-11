@@ -25,3 +25,31 @@ main{
     margin-bottom: 2%;
 }
 
+.container {
+    position: relative;
+    padding: 20px;
+}
+
+.meal-box {
+    display: flex;
+    border: 2px solid #ccc;
+    border-radius: 25px; 
+    text-align: left;
+    width: 95vw; 
+    height: 200px; 
+}
+
+.meal-box h2{
+    display: flex;
+    margin: 20px; 
+    padding: 0; 
+    align-self: flex-start;
+}
+
+
+
+h2 {
+    
+}
+
+
