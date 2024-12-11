@@ -1,27 +1,55 @@
 header{
-    font-family:'Courier New', Courier, monospace
+    font-family:'Courier New', Courier, monospace;
     margin:0;
 }
+
 h1{
     display: flex;
     justify-content: space-between;
     padding: 60px;
 }
-nav{
-    display:flex;
-    flex-direction: row;
-    color: black;
 
+nav{
+    display: flex;
+    flex-direction: row;
 }
+
 nav ul{
     list-style-type: none;
 }
+
 nav li{
     display: inline;
 }
+
 main{
     display: flex;
     margin-top: 2%;
     margin-bottom: 2%;
 }
+
+.container {
+    position: relative;
+    padding: 20px;
+}
+
+.meal-box {
+    display: flex;
+    border: 2px solid #ccc;
+    border-radius: 25px; 
+    text-align: left;
+    width: 95vw; 
+    height: 200px; 
+}
+
+.meal-box h2{
+    display: flex;
+    margin: 20px; 
+    padding: 0; 
+    align-self: flex-start;
+}
+
+h2 {   
+}
+
 
