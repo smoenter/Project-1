@@ -8,18 +8,69 @@
 </head>
 <body>
     <header class="top">
-        <h1>My Virtual Recipe Box</h1>
+        <!-- nav -->
         <nav>
-            <ul>
-                <li><a href="#breakfast"> Breakfast</a></li>
+            <ul class="nav-tabs">
+<!-- Stacey could add tabs here if we have enough time -->
+ <!-- https://getbootstrap.com/docs/5.3/components/navs-tabs/#javascript-behavior- under tabs -->
+                <li><a aria-current="page" href="#breakfast"> Breakfast</a></li>
                 
-                    <li><a href="#lunch"> Lunch</a></li>
+                <li><a href="#lunch"> Lunch</a></li>
 
-                        <li><a href="#dinner"> Dinner</a></li>
+                <li><a href="#dinner"> Dinner</a></li>
             </ul>
         </nav>
+
+        <h1>My Recipe Box</h1>
+
+        <button type="button" class="add-recipe">Add New Recipe</button>
+
+        <!-- form -->
+        <form>
+
+            <div class="form-input1">
+              <label>Recipe Name</label>
+              <div>
+                <input type=text class="form-control" id="inputRecipeName">
+              </div>
+            </div>
+
+            <div class="form-input2">
+              <label>Ingredients used</label>
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+
+            <select class="bld-dropdown" aria-label="Default select example">
+                <option selected>Meal Category</option>
+                <option value="1">Breakfast</option>
+                <option value="2">Lunch</option>
+                <option value="3">Dinner</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary">Add to your box!</button>
+
+          </form>
+
     </header>
+
+
     <main>
+        <!-- card -->
+        <div class="card" style="width: 18rem;">
+
+            <div class="card-body">
+              <h3 class="card-title">
+                <input type="text" placeholder="Your Recipe Name">
+              </h3>
+             
+              <p class="card-ingredients">
+                <textarea placeholder="List Ingredients Here"></textarea>
+              </p>
+            </div>
+
+        </div>
+
+          <!-- meal boxes -->
         <div class="container">
             <div id= "breakfast" class= "meal-box">
                 <h2>Breakfast</h2>
@@ -31,11 +82,12 @@
                 <h2>Dinner</h2>
             </div>
         </div>
+
     </main>
     
 
     <footer>
-
+        <h4>✨Created by: Alyssa Dailey, Quinn Brown, and Stacey Moenter✨</h4>
     </footer>
     <script src="script.js"></script>
 </body>
