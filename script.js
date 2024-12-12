@@ -8,25 +8,22 @@ function addNewContent() {
     const newContent = document.createElement('p');
     newContent.classList.add('added-content');
     newContent.textContent = newRecipe;
+   
 
-    const likeButton = document.createElement('button');
-    likeButton.textContent = 'like';
-    likeButton.addEventListener('click', ()=>{
+    const submitButton = document.createElement('button');
+    submitButton.textContent = 'submit';
+    submitButton.addEventListener('click', ()=>{
         const recipeText= newContent.textContent;
         storeAndDisplayRecipe(recipeText)
     }) 
     // Append the new to the content container
     contentContainer.appendChild(newContent);
-    contentContainer.appendChild(likeButton);
+    contentContainer.appendChild(submitButton);
 }
 
 
 // Add event listener to the "Add" button
 addButton.addEventListener('click', addNewContent);
-
-const likeButton = document.getElementById('likeButton');
-const dislikeButton = document.getElementById('dislikeButton');
-const result = document.getElementById('result');
 
 const likedRecipeContainer = document.getElementById('likedRecipe');
 
@@ -37,28 +34,46 @@ function storeAndDisplayRecipe(recipe) {
 
     likedRecipeContainer.innerHTML = '';
 
+
     likedRecipe.forEach(recipe => {
         const li = document.createElement('li');
         li.textContent =recipe;
         likedRecipeContainer.appendChild(li);
     });
 }
+  
+// define the card template
+// const cardTemplate = `<div class="card">
+//   <div class="card-body">
+//   <h3 class=:card-title"></h3> = document.getElementbyId('myInput').placeholder = "Recipe Name";
+//   <p class="card-text">{{description}}</p>
+//   </div>
+//   </div>
+//   `;
+  
 
-// // Event listener for the like button
-// likeButton.addEventListener('click', () => {
+// Recipe Card
+function recipeCard() =document.addEventListener("DOMContentLoaded",()=>) {
+const ingredients = []
+)};
 
-//     // When the page loads, check if the user has already liked it
-// window.addEventListener('load', () => {
-//         const likeStatus = localStorage.getItem('likeStatus');
-        
 
-//         if (likeStatus === 'liked') {
-//             result.textContent = 'You liked this!';
-//             result.style.color = 'green';
-//         }
-//     });
 
-//     //to do - get the liked list from local storage
+
+
+
+
+
+
+
+  
+// const cardTemplate = document.getElementById('cardTemplate');
+// const cardTitle = document.getElementById('myInput').placeholder = "Recipe Name";
+// const ingredientsUsed= document.getElementById('myTextarea').placeholder = "Add your ingredients here";
+
+
+
+// //     //to do - get the liked list from local storage
 //     let recipe = JSON.parse(localStorage.getItem('recipe')) || [];
 
 //     //to to do parse that list if it exists so that now its an array if not make an emoty array
@@ -77,18 +92,9 @@ function storeAndDisplayRecipe(recipe) {
 //     console.log(storedArray);
 // });
 
-//     // Event listener for the dislike button
-//     // dislikeButton.addEventListener('click', () => {
-//         // result.textContent = 'You disliked this!';
-//     //     result.style.color = 'red';
-//     //     localStorage.removeItem('dislikebutton');
-//     // });
 
 
-//     // to be able to put the recipes in a category
-    
-    
-//     // Return to the main page
+
 
 
 
