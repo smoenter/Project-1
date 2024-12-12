@@ -8,15 +8,16 @@
 </head>
 <body>
     <header class="top">
+        <!-- nav -->
         <nav>
             <ul class="nav-tabs">
-<!-- STACY NEEDS TO ADD JAVASCRIPT HERE TO MAKE TAB STYLING HAPPEN -->
+<!-- Stacey could add tabs here if we have enough time -->
  <!-- https://getbootstrap.com/docs/5.3/components/navs-tabs/#javascript-behavior- under tabs -->
                 <li><a aria-current="page" href="#breakfast"> Breakfast</a></li>
                 
-                    <li><a href="#lunch"> Lunch</a></li>
+                <li><a href="#lunch"> Lunch</a></li>
 
-                        <li><a href="#dinner"> Dinner</a></li>
+                <li><a href="#dinner"> Dinner</a></li>
             </ul>
         </nav>
 
@@ -24,8 +25,9 @@
 
         <button type="button" class="add-recipe">Add New Recipe</button>
 
+        <!-- form -->
         <form>
-    
+
             <div class="form-input1">
               <label>Recipe Name</label>
               <div>
@@ -46,21 +48,29 @@
             </select>
 
             <button type="submit" class="btn btn-primary">Add to your box!</button>
+
           </form>
 
     </header>
+
+
     <main>
         <!-- card -->
         <div class="card" style="width: 18rem;">
+
             <div class="card-body">
-              <h3 class="card-title"></h3>
+              <h3 class="card-title">
+                <input type="text" placeholder="Your Recipe Name">
+              </h3>
              
-              <p class="card-ingredients">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    
+              <p class="card-ingredients">
+                <textarea placeholder="List Ingredients Here"></textarea>
+              </p>
             </div>
-          </div>
 
+        </div>
 
+          <!-- meal boxes -->
         <div class="container">
             <div id= "breakfast" class= "meal-box">
                 <h2>Breakfast</h2>
@@ -72,11 +82,12 @@
                 <h2>Dinner</h2>
             </div>
         </div>
+
     </main>
     
 
     <footer>
-        
+        <h4>✨Created by: Alyssa Dailey, Quinn Brown, and Stacey Moenter✨</h4>
     </footer>
     <script src="script.js"></script>
 </body>
