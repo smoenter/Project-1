@@ -8,18 +8,59 @@
 </head>
 <body>
     <header class="top">
-        <h1>My Virtual Recipe Box</h1>
         <nav>
-            <ul>
-                <li><a href="#breakfast"> Breakfast</a></li>
+            <ul class="nav-tabs">
+<!-- STACY NEEDS TO ADD JAVASCRIPT HERE TO MAKE TAB STYLING HAPPEN -->
+ <!-- https://getbootstrap.com/docs/5.3/components/navs-tabs/#javascript-behavior- under tabs -->
+                <li><a aria-current="page" href="#breakfast"> Breakfast</a></li>
                 
                     <li><a href="#lunch"> Lunch</a></li>
 
                         <li><a href="#dinner"> Dinner</a></li>
             </ul>
         </nav>
+
+        <h1>My Recipe Box</h1>
+
+        <button type="button" class="add-recipe">Add New Recipe</button>
+
+        <form>
+    
+            <div class="form-input1">
+              <label>Recipe Name</label>
+              <div>
+                <input type=text class="form-control" id="inputRecipeName">
+              </div>
+            </div>
+
+            <div class="form-input2">
+              <label>Ingredients used</label>
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+
+            <select class="bld-dropdown" aria-label="Default select example">
+                <option selected>Meal Category</option>
+                <option value="1">Breakfast</option>
+                <option value="2">Lunch</option>
+                <option value="3">Dinner</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary">Add to your box!</button>
+          </form>
+
     </header>
     <main>
+        <!-- card -->
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h3 class="card-title"></h3>
+             
+              <p class="card-ingredients">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    
+            </div>
+          </div>
+
+
         <div class="container">
             <div id= "breakfast" class= "meal-box">
                 <h2>Breakfast</h2>
@@ -35,7 +76,7 @@
     
 
     <footer>
-
+        
     </footer>
     <script src="script.js"></script>
 </body>
