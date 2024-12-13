@@ -1,48 +1,59 @@
 // Add an Add button to add
-const addButton = document.getElementById('addButton');
+const addButton = document.querySelector('.add-recipe');
 const contentContainer = document.getElementById('contentContainer');
+const modal = document.getElementById('recipeModal');
+const recipeForm = document.getElementById('recipeForm');
+
+addButton.addEventListener('click', () => {
+    const recipeModal = document.getElementById('recipeModal');
+    recipeModal.classList.add('show');
+    recipeModal.style.display = 'block'; 
+    recipeModal.setAttribute('aria-hidden', 'false'); 
+    document.body.classList.add('modal-open'); 
+    });
+
 
 // Function to handle adding new content
-function addNewContent() {
-    const newRecipe = document.querySelector('.textContent').value;
-    const newContent = document.createElement('p');
-    newContent.classList.add('added-content');
-    newContent.textContent = newRecipe;
+// function addNewContent() {
+//     const newRecipe = document.querySelector('.textContent').value;
+//     const newContent = document.createElement('p');
+//     newContent.classList.add('added-content');
+//     newContent.textContent = newRecipe;
    
 
-    const submitButton = document.createElement('button');
-    submitButton.textContent = 'submit';
-    submitButton.addEventListener('click', ()=>{
-        const recipeText= newContent.textContent;
-        storeAndDisplayRecipe(recipeText)
-    }) 
-    // Append the new to the content container
-    contentContainer.appendChild(newContent);
-    contentContainer.appendChild(submitButton);
-}
+//     const submitButton = document.createElement('button');
+//     submitButton.textContent = 'submit';
+//     submitButton.addEventListener('click', ()=>{
+//         const recipeText= newContent.textContent;
+//         storeAndDisplayRecipe(recipeText)
+//     }) 
+//     // Append the new to the content container
+//     contentContainer.appendChild(newContent);
+//     contentContainer.appendChild(submitButton);
+// }
 
 
 // Add event listener to the "Add" button
-addButton.addEventListener('click', addNewContent);
+// addButton.addEventListener('click', addNewContent);
 
-const likedRecipeContainer = document.getElementById('likedRecipe');
+// const likedRecipeContainer = document.getElementById('likedRecipe');
 
-function storeAndDisplayRecipe(recipe) {
-    let likedRecipe = JSON.parse(localStorage.getItem('likedRecipe')) || [];
-    likedRecipe.push(recipe);
-    localStorage.setItem('likedRecipe',JSON.stringify(likedRecipe));
+// function storeAndDisplayRecipe(recipe) {
+//     let likedRecipe = JSON.parse(localStorage.getItem('likedRecipe')) || [];
+//     likedRecipe.push(recipe);
+//     localStorage.setItem('likedRecipe',JSON.stringify(likedRecipe));
 
-    likedRecipeContainer.innerHTML = '';
+//     likedRecipeContainer.innerHTML = '';
 
 
-    likedRecipe.forEach(recipe => {
-        const li = document.createElement('li');
-        li.textContent =recipe;
-        likedRecipeContainer.appendChild(li);
-    });
-}
+//     likedRecipe.forEach(recipe => {
+//         const li = document.createElement('li');
+//         li.textContent =recipe;
+//         likedRecipeContainer.appendChild(li);
+//     });
+// }
   
-// define the card template
+// // define the card template
 // const cardTemplate = `<div class="card">
 //   <div class="card-body">
 //   <h3 class=:card-title"></h3> = document.getElementbyId('myInput').placeholder = "Recipe Name";
@@ -52,10 +63,10 @@ function storeAndDisplayRecipe(recipe) {
 //   `;
   
 
-// Recipe Card
-function recipeCard() =document.addEventListener("DOMContentLoaded",()=>) {
-const ingredients = []
-)};
+// // Recipe Card
+// function recipeCard() =document.addEventListener("DOMContentLoaded",()=>) {
+// const ingredients = []
+// )};
 
 
 
