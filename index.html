@@ -101,22 +101,22 @@
 
             <div class="mb-3">
               <label for="recipeName" class="form-label">Recipe Name</label>
-              <input type="password" class="form-control" id="recipeName">
+              <input type="text" class="form-control" id="recipeName">
             </div>
 
             <div class="form-input2">
               <label>Ingredients used</label>
-              <textarea class="form-control" rows="3"></textarea>
+              <textarea id="ingredientsUsed"class="form-control" rows="3"></textarea>
             </div>
 
             <select class="formSelect" id="recipeCategory" aria-label="Default select example" required>
               <option selected>Meal Category</option>
-              <option value="1">Breakfast</option>
-              <option value="2">Lunch</option>
-              <option value="3">Dinner</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
             </select>
 
-            <button type="submit" class="btn btn-primary">Add to your box!</button>
+            <button id="submitButton" type="submit" class="btn btn-primary">Add to your box!</button>
 
           </form>
         </div>

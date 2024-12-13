@@ -12,6 +12,83 @@ addButton.addEventListener('click', () => {
     document.body.classList.add('modal-open'); 
     });
 
+const submitButton = document.getElementById('submitButton');
+const breakfast = document.getElementById('breakfast');
+const lunch = document.getElementById('lunch');
+const dinner = document.getElementById('dinner');
+
+recipeForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    console.log('click');
+
+const recipeName = document.getElementById('recipeName').value;
+const ingredientsUsed = document.getElementById('ingredientsUsed').value;
+const recipeCategory = document.getElementById('recipeCategory').value;
+
+const newRecipe = {
+
+    name: recipeName, 
+    ingredients: ingredientsUsed,
+    category: recipeCategory,
+}
+
+const storedRecipes = JSON.parse(localStorage.getItem('recipes')) || [];
+storedRecipes.push(newRecipe);
+localStorage.setItem('recipes', JSON.stringify(storedRecipes)); 
+
+renderRecipeCard(recipeName, ingredientsUsed, recipeCategory)
+recipeForm.reset()
+    });
+
+const renderRecipeCard = (name, ingredients, category) =>{
+    const recipeCard = document.createElement('div');
+    recipeCard.classList.add('card', "mb-3", 'shadow-sm')
+
+    recipeCard.innerHTML=`
+    <div class="card-body">
+    <h5 class="card-title">${recipeName}</h5>
+    <p class="card-text">${ingredientsUsed}</p>
+    </div>
+    `;
+
+    if(recipeCategory === 'breakfast') {
+        breakfast.appendChild(recipeCard)
+    } else if(recipeCategory === 'lunch') {
+        lunch.appendChild(recipeCard)
+    } else if(recipeCategory === 'dinner') {
+        dinner.appendChild(recipeCard)
+    }
+
+}
+const loadRecipes = () =>{
+    const storedRecipes = JSON.parse(localStorage.getItem('recipes')) || [];
+    storedRecipes.forEach((recipe) => {
+        renderRecipeCard(recipe.name, recipe.ingredients, recipe.category)
+    })
+}
+loadRecipes();
+ 
+
+
+// function addNewContent() {
+//     const newRecipe = document.querySelector('.textContent').value;
+//     const newContent = document.createElement('textarea');
+//     newContent.classList.add('added-content');
+//     newContent.textContent = newRecipe;
+   
+
+//     const submitButton = document.createElement('button');
+//     submitButton.textContent = 'submit';
+//     submitButton.addEventListener('click', ()=>{
+//         const recipeText= newContent.textContent;
+//         storeAndDisplayRecipe(recipeText)
+//     }) 
+//     // Append the new to the content container
+//     contentContainer.appendChild(newContent);
+//  }
+
+
+
 
 // Function to handle adding new content
 // function addNewContent() {
@@ -53,35 +130,6 @@ addButton.addEventListener('click', () => {
 //     });
 // }
   
-// // define the card template
-// const cardTemplate = `<div class="card">
-//   <div class="card-body">
-//   <h3 class=:card-title"></h3> = document.getElementbyId('myInput').placeholder = "Recipe Name";
-//   <p class="card-text">{{description}}</p>
-//   </div>
-//   </div>
-//   `;
-  
-
-// // Recipe Card
-// function recipeCard() =document.addEventListener("DOMContentLoaded",()=>) {
-// const ingredients = []
-// )};
-
-
-
-
-
-
-
-
-
-
-  
-// const cardTemplate = document.getElementById('cardTemplate');
-// const cardTitle = document.getElementById('myInput').placeholder = "Recipe Name";
-// const ingredientsUsed= document.getElementById('myTextarea').placeholder = "Add your ingredients here";
-
 
 
 // //     //to do - get the liked list from local storage
@@ -101,7 +149,7 @@ addButton.addEventListener('click', () => {
 
 //     // Display the updated array in the console
 //     console.log(storedArray);
-// });
+
 
 
 
