@@ -1,0 +1,80 @@
+/* .card {
+  background-image:
+    linear-gradient(180deg, white 3rem, #F0A4A4 calc(3rem), #F0A4A4 calc(3rem + 2px), transparent 1px),
+    repeating-linear-gradient(0deg, transparent, transparent 1.5rem, #DDD 1px, #DDD calc(1.5rem + 1px));
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .25);
+  height: 14rem;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: darksalmon;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+.card-image {
+position: absolute;
+top: 10px; 
+left: 10px; 
+width: 30px; 
+height: auto;
+border-radius: 5px;
+gap: 30px;
+background-color: bisque;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  padding: 10px;
+  height: 130px;
+  }
+
+ .card-ingredient {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1 px solid #ccc;
+  resize: vertical;
+  flex-grow: 1;
+  margin-top: 10px;
+  box-sizing: border-box;
+ } 
+
+
+ .card-title {
+  position: absolute;
+  top: 10px;
+  right: 50px;   
+  margin: 0px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-grow: 1;  
+  }  
+
+
+@media (max-width: 767px) {
+  * {
+    width: 90%;  
+    height: 12rem; 
+    box-shadow: none; 
+    background-color: blue;
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+   * {
+    width: 80%; 
+    height: 16rem; 
+    background-color: chartreuse;
+  }
+} */
