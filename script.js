@@ -40,7 +40,6 @@ const storedRecipes = JSON.parse(localStorage.getItem('recipes')) || [];
 storedRecipes.push(newRecipe);
 localStorage.setItem('recipes', JSON.stringify(storedRecipes)); 
 
-
 renderRecipeCard(recipeName, ingredientsUsed, recipeCategory)
 recipeForm.reset()
     });
