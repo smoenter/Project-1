@@ -185,14 +185,10 @@ main{
     padding: 5px;
 }
 .meal-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
     border: 2px solid grey;
     border-radius: 25px;
     width: 90vw;
     height: 200px;
-    overflow: hidden;
     margin: 20px;
 }
 .breakfast{
@@ -264,6 +260,5 @@ h5 {
 .names img {
     margin-right: 8px;
 }
-
 
 
