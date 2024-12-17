@@ -37,6 +37,13 @@ h2{
     display: flex;
     justify-content: center;
 }
+h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+    
 
 button {
     display: flex;
@@ -227,6 +234,7 @@ main{
     height: 200px;
     margin: 20px;
 }
+.meal-box
 
 div.meal-box:empty {
     height: 200px;
@@ -237,6 +245,9 @@ div.meal-box:empty {
     background-size: 200px 200px; /* Adjust the size as needed */
     background-position: center; /* Optional: position the image */
     background-repeat: repeat; 
+    box-sizing: content-box;
+    
+
 }
 
 .lunch{
@@ -257,6 +268,7 @@ div.meal-box:empty {
     background-size: 300px 300px;
     background-position: center;
     background-repeat: repeat; 
+
 }
 
 .meal-box h3{
