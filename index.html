@@ -60,15 +60,15 @@
 
 <!-- CARD -->
   <div class="card" id="recipeCard" style="display: none;">
+    <div class="container" id="recipesContainer">
+      <h4 id="cardRecipeName"><strong></strong></h4>
 
-    <h4 id="cardRecipeName"><strong></strong></h4>
-
-    <p>Ingredients:<span id="cardCategory"></span></p>
-    <p id="cardIngredients"></p>
+      <p>Ingredients:<span id="cardCategory"></span></p>
+      <p id="cardIngredients"></p>
     
-    <p>Instructions:<span id="cardInstruct"></span></p>
-    <p id="cardInstructions"></p>
-    
+      <p>Instructions:<span id="cardInstruct"></span></p>
+      <p id="cardInstructions"></p>
+    </div>
   </div> 
 
     
@@ -114,8 +114,10 @@
 
   </main>
 
+  <!-- aria-hidden="true" aria-labelledby="recipeModalLabel" -->
+
   <!-- MODAL -->
-  <div class="modal fade" id="recipeModal" data-bs-backdrop= "static" data-bs-keyboard= "false" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+  <div class="modal fade" id="recipeModal" data-bs-backdrop= "static" data-bs-keyboard= "false" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
 
@@ -134,12 +136,12 @@
             </div>
 
             <div class="form-input2">
-              <label>Ingredients:</label>
+              <label>Ingredients: (separate each ingredient using a ,)</label>
               <textarea class="form-control" id="ingredients" rows="3"></textarea>
             </div>
 
             <div class="form-input3">
-              <label>Instructions:</label>
+              <label>Instructions: (separate each step using a ,)</label>
               <textarea class="form-control" id="instructions" rows="3"></textarea>
             </div>
 

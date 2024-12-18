@@ -24,9 +24,9 @@ recipeForm.addEventListener('submit', (event) => {
 event.preventDefault();
 
 const recipeName = document.getElementById('recipeName').value;
-const ingredients = document.getElementById('ingredients').value;
-const instructions = document.getElementById ('instructions').value;
-const category = document.getElementById('recipeCategory').value;
+const ingredientsUsed = document.getElementById('ingredients').value;
+const instructionsUsed = document.getElementById ('instructions').value;
+const recipeCategory = document.getElementById('recipeCategory').value;
 
 const newRecipe = {
 
@@ -40,15 +40,21 @@ const storedRecipes = JSON.parse(localStorage.getItem('recipes')) || [];
 storedRecipes.push(newRecipe);
 localStorage.setItem('recipes', JSON.stringify(storedRecipes)); 
 
-renderRecipeCard(recipeName, ingredientsUsed, recipeCategory)
+renderRecipeCard(recipeName, ingredientsUsed, instructionsUsed, recipeCategory)
 recipeForm.reset()
     });
 
-    const renderRecipeCard = (name, ingredients, category) =>{
+    const renderRecipeCard = (recipeName, ingredientsUsed, instructionsUsed, recipeCategory) =>{
         const recipeCard = document.createElement('div');
         recipeCard.classList.add('card', "mb-3", 'shadow-sm')
 
-     const ingredientsList = ingredients.split(',').map(ingredient => `<li>${ingredient.trim()}</li>`).join('');
+        const recipeNameElement = document.createElement('h5');
+        recipeNameElement.textContent = name;
+        recipeCard.appendChild(recipeNameElement);
+    
+
+        const recipesContainer = document.getElementById('recipesContainer'); // Ensure you have this container in your HTML
+        recipesContainer.appendChild(recipeCard);        
 
     };
 
@@ -78,8 +84,9 @@ document.getElementById('submitButton').addEventListener('click', function() {
     // alyssa added 12.16 234
 
     const recipeCard = document.createElement('div');
-
     recipeCard.classList.add('card', 'mb-3', 'shadow-sm');
+
+
     recipeCard.style.width = '500px'; // Sets card width
     recipeCard.style.height = 'auto'; // Keep height dynamic
     recipeCard.style.padding = '20px'; 
@@ -87,19 +94,20 @@ document.getElementById('submitButton').addEventListener('click', function() {
     recipeCard.style.borderRadius = '20px';
     recipeCard.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
     recipeCard.style.margin = '10px';
-    recipeCard.style.backgroundImage = 'url(https://cdn.vectorstock.com/i/1000v/71/36/seamless-sweet-checkered-baby-pink-background-vector-1777136.jpg)' 
-    recipeCard.style.backgroundSize = '250px 250px'; 
+    recipeCard.style.backgroundImage = 'url(https://i.pinimg.com/736x/45/a7/b7/45a7b74c4656308821f0fe2f250540e0.jpg)' 
+    recipeCard.style.backgroundSize = '300px 300px'; 
     recipeCard.style.backgroundRepeat = 'repeat'; 
 
 
     const ingredientsList = ingredients.split(',').map(ingredient => `<li>${ingredient.trim()}</li>`).join('');
+    const instructionsList = instructions.split(',').map(instructions => `<li>${instructions.trim()}</li>`).join('');
     recipeCard.innerHTML = `
         <div class="card-body">
             <h5 class="card-title"><strong>${recipeName}</strong></h5>
             <p class="card-text">Ingredients:</p>
             <ul>${ingredientsList}</ul>
             <p>Instructions:</p>
-            <p>${instructions}</p>
+            <ul>${instructionsList}</ul>
         </div>
     `;
 
