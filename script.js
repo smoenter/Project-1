@@ -1,10 +1,9 @@
 // Add button
+const addButton = document.querySelector('.add-recipe');
+const modal= new bootstrap.Modal(document.getElementById('recipeModal'));
+
 addButton.addEventListener('click', () => {
-    const recipeModal = document.getElementById('recipeModal');
-    recipeModal.classList.add('show');
-    recipeModal.style.display = 'block';
-    recipeModal.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('modal-open');
+    modal.show();
 });
 
 // retrieving DOM elements to hold the recipe cards for each category
@@ -15,16 +14,52 @@ const sweets = document.getElementById('sweets');
 
 // Submit button 
 const recipeForm = document.getElementById('recipeForm');
-const modal = document.getElementById('recipeModal');
+const recipeModal = document.getElementById('recipeModal');
+
 
 recipeForm.addEventListener('submit', (event) => {
     event.preventDefault();
+    console.log('Form submitted');
 
 // collects form data 
 const recipeName = document.getElementById('recipeName').value;
 const ingredients = document.getElementById('ingredients').value;
 const instructions = document.getElementById ('instructions').value;
 const category = document.getElementById('recipeCategory').value;
+
+if(!recipeName){
+    const error= document.querySelector('.error.recipeName');
+    error.innerText = 'Recipe Name Required';
+    return;
+} else {
+    const error= document.querySelector('.error.recipeName');
+    error.innerText = '';
+}
+
+if(category === 'Meal Category') {
+    const error= document.querySelector('.error.recipeCategory');
+    error.innerText = 'Category Required';
+    return;
+} else {
+    const error= document.querySelector('.error.recipeCategory');
+    error.innerText = '';
+}
+ if(!ingredients){
+    const error= document.querySelector('.error.ingredients');
+    error.innerText = 'Ingredients Required';
+    return;
+} else {
+    const error= document.querySelector('.error.ingredients');
+    error.innerText = '';
+}
+if (!instructions) {
+    const error= document.querySelector('.error.instructions');
+    error.innerText = 'Instructions Required';
+    return;
+} else {
+    const error= document.querySelector('.error.instructions');
+    error.innerText = '';
+}
 
 // create a new recipe object
 const newRecipe = {
@@ -34,7 +69,7 @@ const newRecipe = {
     category: category,
 };
 
-// save tge recipe to localstore
+// save the recipe to localstore
 const storedRecipes = JSON.parse(localStorage.getItem('recipes')) || [];
 storedRecipes.push(newRecipe);
 localStorage.setItem('recipes', JSON.stringify(storedRecipes));
@@ -44,19 +79,17 @@ renderRecipeCard(newRecipe);
 
 // Reset the form and close the modal
   recipeForm.reset();
-  modal.classList.remove('show');
-  modal.style.display = 'none';
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.classList.remove('modal-open');
+  modal.hide();
 });
 
 
 // style the recipe card and render recipe card function
 const renderRecipeCard = (recipe) => {
+    console.log(recipe);
     const recipeCard = document.createElement('div');
-    recipeCard.classList.add('card', 'mb-3', 'shadow-sm', 'col-md-6 col-sm-12');
-    recipeCard.style.width = '500px'; // Sets card width
-    recipeCard.style.height = 'auto'; // Keep height dynamic
+    recipeCard.classList.add('card', 'mb-3', 'shadow-sm', 'col-md-6', 'col-sm-12');
+    recipeCard.style.width = '500px'; 
+    recipeCard.style.height = 'auto'; 
     recipeCard.style.padding = '20px';
     recipeCard.style.border = '1px solid #ccc';
     recipeCard.style.borderRadius = '20px';
@@ -71,11 +104,11 @@ const renderRecipeCard = (recipe) => {
      const ingredientsList = recipe.ingredients.split(',').map(ingredient => `<li>${ingredient.trim()}</li>`).join('');
      recipeCard.innerHTML = `
      <div class="card-body ">
-         <h4 class="card-title"><strong>${recipeName}</strong></h4>
+         <h4 class="card-title"><strong>${recipe.name}</strong></h4>
          <p class="card-text">Ingredients:</p>
          <ul>${ingredientsList}</ul>
          <p>Instructions:</p>
-         <p>${instructions}</p>
+         <p>${recipe.instructions}</p>
      </div>
  `;
 
@@ -102,5 +135,3 @@ const loadRecipes = () =>{
 // When DOM content is loaded, load the recipes
 window.addEventListener('DOMContentLoaded', loadRecipes);
     
- 
-

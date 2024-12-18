@@ -5,7 +5,7 @@ A quick and easy way to save your favorite recipes without having to lot of pape
 The digital recipes box was built to help people to easily save your favorite recipes. This is a great way to never lose your favorite recipes.
 
 - What problem does it solve? Quick and paperless system to save your favorite recipes
-- What did you learn? Learned how to use CSS in many different way
+- What did you learn? That there are many different ways to code and get the same results. 
 
 ## Table of Contents (Optional)
 If your README is long, add a table of contents to make it easy for users to find what they need.
@@ -23,7 +23,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
  
 ## Credits
-Alyssa Dailey: https://gitHub.com/alyssadailey  as the project leader, who also worked on the wirefram and HTML, Stacey Moenter: https://github.com/smoenter, who worked on the Javascript and the README, and Quinn Brown: https://github.com/Beazzty , who worked on the CSS portion of the project. Assistance from Diem and other instructors. 
+Alyssa Dailey: https://gitHub.com/alyssadailey  as the project leader, who also worked on the wirefram and HTML, Stacey Moenter: https://github.com/smoenter, who worked on the Javascript and the README, and Quinn Brown: https://github.com/Beazzty , who worked on the CSS portion of the project. Assistance from Diem Ly and Aaron Brwon and other instructors, who gave us support and guidance. 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 https://codepen.io/teddyzetterlund/pen/YPjEzP - used to make the ingredient card
@@ -41,6 +41,6 @@ Add new recipe button allows users to input a new recipe into their correspondin
 Submit button saves the recipe to localstoreage and triggers the new card to display
 
 ## How to Contribute
-Add a find recipe button to be able to quickly find a recipe that you are looking for
+Add a find recipe button to be able to quickly find a recipe that you are looking for.
 Add a share button to be able to share you favorite recipes quickly with your coworkers, friends and family.
  
