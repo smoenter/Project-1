@@ -68,16 +68,18 @@
   </header>
   <main>
 
-    <!-- CARD -->
-    <div class="card" id="recipeCard" style="display: none;">
-
+<!-- CARD -->
+  <div class="card" id="recipeCard" style="display: none;">
+    <div class="container" id="recipesContainer">
       <h4 id="cardRecipeName"><strong></strong></h4>
 
-      <p>Ingredients:<span id="cardCategory"></span></p>
+      <p>Ingredient:<span id="cardCategory"></span></p>
       <p id="cardIngredients"></p>
-
+    
       <p>Instructions:<span id="cardInstruct"></span></p>
       <p id="cardInstructions"></p>
+    </div>
+  </div> 
 
     </div>
 
@@ -124,9 +126,10 @@
 
   </main>
 
+  <!-- aria-hidden="true" aria-labelledby="recipeModalLabel" -->
+
   <!-- MODAL -->
-  <div class="modal fade" id="recipeModal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="recipeModalLabel"
-    aria-hidden="true">
+  <div class="modal fade" id="recipeModal" data-bs-backdrop= "static" data-bs-keyboard= "false" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
 
@@ -146,13 +149,13 @@
             </div>
 
             <div class="form-input2">
-              <label>Ingredients:</label>
+              <label>Ingredients: (separate each ingredient using a ,)</label>
               <textarea class="form-control" id="ingredients" rows="3"></textarea>
               <div class="error ingredients"></div>
             </div>
 
             <div class="form-input3">
-              <label>Instructions:</label>
+              <label>Instructions: (separate each step using a ,)</label>
               <textarea class="form-control" id="instructions" rows="3"></textarea>
               <div class="error instructions"></div>
             </div>
@@ -160,7 +163,7 @@
 
             <select class="formSelect" id="recipeCategory" aria-label="Default select example" required>
               <option selected>Meal Category</option>
-              <option value="breakfast ">Breakfast</option>
+              <option value="breakfast">Breakfast</option>
               <option value="lunch">Lunch</option>
               <option value="dinner">Dinner</option>
               <option value="sweets">Sweets</option>
@@ -168,9 +171,7 @@
             <button id="submitButton" type="submit" class="btn btn-primary">Add to your box!</button>
             <div class="error recipeCategory"></div>
 
-            <!-- color picker -->
-            <!-- <label for="exampleColorInput" class="form-label">Pick the color of your card:</label>
-            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color"> -->
+          
           </form>
         </div>
         <div class="modal-footer">

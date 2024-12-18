@@ -95,20 +95,22 @@ const renderRecipeCard = (recipe) => {
     recipeCard.style.borderRadius = '20px';
     recipeCard.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
     recipeCard.style.margin = '10px';
-    recipeCard.style.backgroundImage = 'url(https://cdn.vectorstock.com/i/1000v/71/36/seamless-sweet-checkered-baby-pink-background-vector-1777136.jpg)'
-    recipeCard.style.backgroundSize = '250px 250px';
+    recipeCard.style.backgroundImage = 'url(https://i.pinimg.com/736x/45/a7/b7/45a7b74c4656308821f0fe2f250540e0.jpg)'
+    recipeCard.style.backgroundSize = '300px 300px';
     recipeCard.style.backgroundRepeat = 'repeat';
 
 
 // add the content to the card
      const ingredientsList = recipe.ingredients.split(',').map(ingredient => `<li>${ingredient.trim()}</li>`).join('');
+     
+     const instructionsList = recipe.instructions.split(',').map(instruction => `<li>${instruction.trim()}</li>`).join('');
      recipeCard.innerHTML = `
      <div class="card-body ">
          <h4 class="card-title"><strong>${recipe.name}</strong></h4>
          <p class="card-text">Ingredients:</p>
          <ul>${ingredientsList}</ul>
-         <p>Instructions:</p>
-         <p>${recipe.instructions}</p>
+         <p class="card-text">Instructions:</p>
+         <ul>${instructionsList}</ul>
      </div>
  `;
 
