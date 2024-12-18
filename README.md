@@ -12,6 +12,8 @@ If your README is long, add a table of contents to make it easy for users to fin
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
+- [features](#features)
+- [contribution](#How to Contribute)
 
 ## Installation
 What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
@@ -20,6 +22,13 @@ What are the steps required to install your project? Provide a step-by-step desc
 Find a recipe that you want to save. Click on the add recipe button to enter your ingredients and the recipe instructions then select a category that you want to store your recipe in such as breakfast, lunch, or dinner. Hit to the submit button to have your recipe to your digital recipe box. (Provide instructions and examples for use. Include screenshots as needed.)
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
 ![alt text](assets/images/screenshot.png)
+![alt text](<Screenshot 2024-12-18 at 6.39.43 PM.png>)
+![alt text](<Screenshot 2024-12-18 at 6.39.32 PM.png>)
+![alt text](<Screenshot 2024-12-18 at 6.46.43 PM.png>)
+
+
+
+
 
  
 ## Credits
